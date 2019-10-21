@@ -31,12 +31,19 @@
   justify-content: start;
 }
 
+.placeholder{
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  display: flex;
+  flex-grow: 1;
+}
+
 #page header {
-  height: 100px;
   border-bottom: solid 3px #00505b;
   width: 100%;
   text-align: center;
-  line-height: 100px;
+  padding:10px 0;
 }
 
 #page footer {

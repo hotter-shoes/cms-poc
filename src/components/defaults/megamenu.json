@@ -1,0 +1,574 @@
+{
+    "sections": [{
+            "title": "Womens",
+            "href": "/gb/en/womens",
+            "contents": [{
+                    "type": "callout",
+                    "data": {
+                        "links": [{
+                                "text": "Shop All",
+                                "href": "/gb/en/womens"
+                            },
+                            {
+                                "text": "Best Sellers",
+                                "href": "/gb/en/womens-best-sellers"
+                            },
+                            {
+                                "text": "New In",
+                                "href": "/gb/en/womens-new-in"
+                            },
+                            {
+                                "text": "In The Brochure",
+                                "href": "/gb/en/womens-in-the-brochure"
+                            },
+                            {
+                                "text": "Holiday Shop",
+                                "href": "/gb/en/womens-holiday-shop"
+                            }, {
+                                "text": "Shop the TV Advert",
+                                "href": "/gb/en/tv-ad"
+                            }, {
+                                "text": "Gift Cards",
+                                "href": "/gb/en/gift-cards"
+                            }
+                        ]
+                    }
+                }, {
+                    "type": "titledList",
+                    "data": {
+                        "title": "Shop by Category",
+                        "links": [{
+                                "text": "Accessories",
+                                "href": "/gb/en/womens-accessories"
+                            },
+                            {
+                                "text": "Active",
+                                "href": "/gb/en/womens-active"
+                            },
+                            {
+                                "text": "Boots",
+                                "href": "/gb/en/womens-boots"
+                            },
+                            {
+                                "text": "Gore-Tex",
+                                "href": "/gb/en/womens-gore-tex"
+                            },
+                            {
+                                "text": "Outlet",
+                                "href": "/gb/en/womens-outlet"
+                            }, {
+                                "text": "Sandals",
+                                "href": "/gb/en/womens-sandals"
+                            }, {
+                                "text": "Shoes",
+                                "href": "/gb/en/womens-shoes"
+                            }, {
+                                "text": "Slippers",
+                                "href": "/gb/en/womens-slippers"
+                            }
+
+                        ]
+                    }
+                },
+                {
+                    "type": "titledList",
+                    "data": {
+                        "title": "Shop by Style",
+                        "links": [{
+                                "text": "Accessories",
+                                "href": "/gb/en/womens-accessories"
+                            },
+                            {
+                                "text": "Active",
+                                "href": "/gb/en/womens-active"
+                            },
+                            {
+                                "text": "Boots",
+                                "href": "/gb/en/womens-boots"
+                            },
+                            {
+                                "text": "Gore-Tex",
+                                "href": "/gb/en/womens-gore-tex"
+                            },
+                            {
+                                "text": "Outlet",
+                                "href": "/gb/en/womens-outlet"
+                            }, {
+                                "text": "Sandals",
+                                "href": "/gb/en/womens-sandals"
+                            }, {
+                                "text": "Shoes",
+                                "href": "/gb/en/womens-shoes"
+                            }, {
+                                "text": "Slippers",
+                                "href": "/gb/en/womens-slippers"
+                            }
+
+                        ]
+                    }
+                }, {
+                    "type": "titledList",
+                    "data": {
+                        "title": "Shop Accessories",
+                        "links": [{
+                                "text": "Accessories",
+                                "href": "/gb/en/womens-accessories"
+                            },
+                            {
+                                "text": "Active",
+                                "href": "/gb/en/womens-active"
+                            },
+                            {
+                                "text": "Boots",
+                                "href": "/gb/en/womens-boots"
+                            },
+                            {
+                                "text": "Gore-Tex",
+                                "href": "/gb/en/womens-gore-tex"
+                            },
+                            {
+                                "text": "Outlet",
+                                "href": "/gb/en/womens-outlet"
+                            }, {
+                                "text": "Sandals",
+                                "href": "/gb/en/womens-sandals"
+                            }, {
+                                "text": "Shoes",
+                                "href": "/gb/en/womens-shoes"
+                            }, {
+                                "text": "Slippers",
+                                "href": "/gb/en/womens-slippers"
+                            }
+
+                        ]
+                    }
+                }, {
+                    "type": "titledList",
+                    "data": {
+                        "title": "Shop by Category",
+                        "links": [{
+                                "text": "Accessories",
+                                "href": "/gb/en/womens-accessories"
+                            },
+                            {
+                                "text": "Active",
+                                "href": "/gb/en/womens-active"
+                            },
+                            {
+                                "text": "Boots",
+                                "href": "/gb/en/womens-boots"
+                            },
+                            {
+                                "text": "Gore-Tex",
+                                "href": "/gb/en/womens-gore-tex"
+                            },
+                            {
+                                "text": "Outlet",
+                                "href": "/gb/en/womens-outlet"
+                            }, {
+                                "text": "Sandals",
+                                "href": "/gb/en/womens-sandals"
+                            }, {
+                                "text": "Shoes",
+                                "href": "/gb/en/womens-shoes"
+                            }, {
+                                "text": "Slippers",
+                                "href": "/gb/en/womens-slippers"
+                            }
+
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Mens",
+            "href": "/gb/en/mens",
+            "contents": [{
+                    "type": "callout",
+                    "data": {
+                        "links": [{
+                                "text": "Shop All",
+                                "href": "/gb/en/mens"
+                            },
+                            {
+                                "text": "Best Sellers",
+                                "href": "/gb/en/mens-best-sellers"
+                            },
+                            {
+                                "text": "New In",
+                                "href": "/gb/en/mens-new-in"
+                            },
+                            {
+                                "text": "Outlet",
+                                "href": "/gb/en/mens-outlet"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "titledList",
+                    "data": {
+                        "title": "Shop by Category",
+                        "links": [{
+                                "text": "Boots",
+                                "href": "/gb/en/mens-boots"
+                            },
+                            {
+                                "text": "Gore-Tex",
+                                "href": "/gb/en/mens-gore-tex"
+                            },
+                            {
+                                "text": "Shoes",
+                                "href": "/gb/en/mens-shoes"
+                            },
+                            {
+                                "text": "Slippers",
+                                "href": "/gb/en/mens-slippers"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "titledList",
+                    "data": {
+                        "title": "Shop by Accessories",
+                        "links": [{
+                                "text": "Boots",
+                                "href": "/gb/en/mens-boots"
+                            },
+                            {
+                                "text": "Gore-Tex",
+                                "href": "/gb/en/mens-gore-tex"
+                            },
+                            {
+                                "text": "Shoes",
+                                "href": "/gb/en/mens-shoes"
+                            },
+                            {
+                                "text": "Slippers",
+                                "href": "/gb/en/mens-slippers"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Wide Fit",
+            "href": "/gb/en/wide-fit",
+            "contents": [{
+                    "type": "callout",
+                    "data": {
+                        "links": [{
+                                "text": "Shop All",
+                                "href": "/gb/en/mens"
+                            },
+                            {
+                                "text": "Best Sellers",
+                                "href": "/gb/en/mens-best-sellers"
+                            },
+                            {
+                                "text": "New In",
+                                "href": "/gb/en/mens-new-in"
+                            },
+                            {
+                                "text": "Outlet",
+                                "href": "/gb/en/mens-outlet"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "titledList",
+                    "data": {
+                        "title": "Shop by Category",
+                        "links": [{
+                                "text": "Boots",
+                                "href": "/gb/en/mens-boots"
+                            },
+                            {
+                                "text": "Gore-Tex",
+                                "href": "/gb/en/mens-gore-tex"
+                            },
+                            {
+                                "text": "Shoes",
+                                "href": "/gb/en/mens-shoes"
+                            },
+                            {
+                                "text": "Slippers",
+                                "href": "/gb/en/mens-slippers"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "titledList",
+                    "data": {
+                        "title": "Shop by Style",
+                        "links": [{
+                                "text": "Boots",
+                                "href": "/gb/en/mens-boots"
+                            },
+                            {
+                                "text": "Gore-Tex",
+                                "href": "/gb/en/mens-gore-tex"
+                            },
+                            {
+                                "text": "Shoes",
+                                "href": "/gb/en/mens-shoes"
+                            },
+                            {
+                                "text": "Slippers",
+                                "href": "/gb/en/mens-slippers"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "titledList",
+                    "data": {
+                        "title": "Shop by Collection",
+                        "links": [{
+                                "text": "Boots",
+                                "href": "/gb/en/mens-boots"
+                            },
+                            {
+                                "text": "Gore-Tex",
+                                "href": "/gb/en/mens-gore-tex"
+                            },
+                            {
+                                "text": "Shoes",
+                                "href": "/gb/en/mens-shoes"
+                            },
+                            {
+                                "text": "Slippers",
+                                "href": "/gb/en/mens-slippers"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "titledList",
+                    "data": {
+                        "title": "Shop by Accessories",
+                        "links": [{
+                                "text": "Boots",
+                                "href": "/gb/en/mens-boots"
+                            },
+                            {
+                                "text": "Gore-Tex",
+                                "href": "/gb/en/mens-gore-tex"
+                            },
+                            {
+                                "text": "Shoes",
+                                "href": "/gb/en/mens-shoes"
+                            },
+                            {
+                                "text": "Slippers",
+                                "href": "/gb/en/mens-slippers"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Comfort Lab",
+            "href": "/gb/en/comfort-lab",
+            "contents": [{
+                    "type": "callout",
+                    "data": {
+                        "links": [{
+                                "text": "The Comfort Lab",
+                                "href": "/gb/en/comfort-lab"
+                            },
+                            {
+                                "text": "Anatomy of Lance",
+                                "href": "/gb/en/new"
+                            },
+                            {
+                                "text": "Comfortable Boots",
+                                "href": "/gb/en/brochure"
+                            },
+                            {
+                                "text": "Comfortable Shoes",
+                                "href": "/gb/en/womens"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "image",
+                    "data": {
+                        "src": "https://picsum.photos/380/260?random=3&grayscale=1",
+                        "href": "/gb/en/comfort-lab-1",
+                        "alt":"Comfort Lab 2"
+                    }
+
+                },
+                
+                {
+                    "type": "image",
+                    "data": {
+                        "src": "https://picsum.photos/380/260?random=4&grayscale=1",
+                        "href": "/gb/en/comfort-lab-2",
+                        "alt":"Comfort Lab 2"
+                    }
+
+                }
+            ]
+        },
+        {
+            "title": "Inspiration",
+            "href": "/gb/en/inspiration",
+            "contents": [{
+                    "type": "callout",
+                    "data": {
+                        "links": [{
+                                "text": "Matching Handbags and Shoes",
+                                "href": "/gb/en/inspiration"
+                            },
+                            {
+                                "text": "Winter Metalics",
+                                "href": "/gb/en/new"
+                            },
+                            {
+                                "text": "AW19 Trends",
+                                "href": "/gb/en/brochure"
+                            },
+                            {
+                                "text": "Women and Home Partenership",
+                                "href": "/gb/en/womens"
+                            },
+                            {
+                                "text": "Top 10 Walks",
+                                "href": "/gb/en/womens"
+                            },
+                            {
+                                "text": "Women and Home Nominees",
+                                "href": "/gb/en/womens"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "image",
+                    "data": {
+                        "src": "https://picsum.photos/380/260?random=5&grayscale=1",
+                        "href": "/gb/en/inspiration-1",
+                        "alt":"Inspiration 1"
+                    }
+
+                },
+                
+                {
+                    "type": "image",
+                    "data": {
+                        "src": "https://picsum.photos/380/260?random=6&grayscale=1",
+                        "href": "/gb/en/inspiration-2",
+                        "alt":"Inspiration 2"
+                    }
+
+                }
+            ]
+        },
+        {
+            "title": "Outlet",
+            "href": "/gb/en/outlet",
+            "contents": [{
+                    "type": "callout",
+                    "data": {
+                        "links": [{
+                                "text": "View All",
+                                "href": "/gb/en/inspiration"
+                            },
+                            {
+                                "text": "Shop Mens",
+                                "href": "/gb/en/new"
+                            },
+                            {
+                                "text": "Shop Womens",
+                                "href": "/gb/en/brochure"
+                            },
+                            {
+                                "text": "Shop Wide Fit",
+                                "href": "/gb/en/womens"
+                            },
+                            {
+                                "text": "Shop Accessories",
+                                "href": "/gb/en/womens"
+                            }
+                        ]
+                    }
+                }
+                ,{
+                    "type": "titledList",
+                    "data": {
+                        "title": "Shop By Size",
+                        "links": [{
+                                "text": "Size 3",
+                                "href": "/gb/en/outlet-size-3"
+                            },
+                            {
+                                "text": "Size 3.5",
+                                "href": "/gb/en/outlet-size-3.5"
+                            },
+                            {
+                                "text": "Size 4",
+                                "href": "/gb/en/outlet-size-4"
+                            },
+                            {
+                                "text": "Size 4.5",
+                                "href": "/gb/en/outlet-size-4.5"
+                            }, {
+                                "text": "Size 5",
+                                "href": "/gb/en/outlet-size-5"
+                            }, {
+                                "text": "Size 5.5",
+                                "href": "/gb/en/outlet-size-5.5"
+                            }
+                        ]
+                    }
+                },{
+                    "type": "titledList",
+                    "data": {
+                        "title": "Shop By Size",
+                        "links": [{
+                                "text": "Size 6",
+                                "href": "/gb/en/outlet-size-3"
+                            },
+                            {
+                                "text": "Size 6.5",
+                                "href": "/gb/en/outlet-size-3.5"
+                            },
+                            {
+                                "text": "Size 7",
+                                "href": "/gb/en/outlet-size-4"
+                            },
+                            {
+                                "text": "Size 7.5",
+                                "href": "/gb/en/outlet-size-4.5"
+                            }, {
+                                "text": "Size 8",
+                                "href": "/gb/en/outlet-size-5"
+                            }, {
+                                "text": "Size 8.5",
+                                "href": "/gb/en/outlet-size-5.5"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "image",
+                    "data": {
+                        "src": "https://picsum.photos/380/260?random=7&grayscale=1",
+                        "href": "/gb/en/outlet",
+                        "alt":"Outlet"
+                    }
+
+                }
+            ]
+        }
+    ]
+}

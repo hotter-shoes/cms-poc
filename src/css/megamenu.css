@@ -1,0 +1,186 @@
+#megamenu button {
+  display: none;
+}
+#megamenu #sub-menus {
+  display: flex;
+  justify-content: space-evenly;
+}
+#megamenu #sub-menus .sub-menu-container {
+  margin: 0 5px;
+  width: 100%;
+}
+#megamenu #sub-menus .sub-menu-container .sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  justify-content: space-evenly;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0px 20px 20px 0px #ddd;
+  height: 300px;
+  padding-top: 5px;
+}
+#megamenu #sub-menus .sub-menu-container .sub-menu-title {
+  cursor: pointer;
+  /*for onClick safari*/
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #191919;
+}
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu-title {
+  border-bottom: 3px solid #00505b;
+}
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu {
+  display: flex;
+  font-size: 0.95em;
+}
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu .mm-titled-list {
+  text-align: left;
+  padding: 0 15px;
+}
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu .mm-titled-list p.title {
+  cursor: pointer;
+  /*for onClick safari*/
+  font-weight: bold;
+  margin-top: 0;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu .mm-titled-list a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu .mm-shop-by-size {
+  text-align: left;
+  padding: 0 15px;
+  min-width:300px;
+
+}
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu .mm-shop-by-size p.title {
+  cursor: pointer;
+  /*for onClick safari*/
+  font-weight: bold;
+  margin-top: 0;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu .mm-shop-by-size .links{
+display:flex;
+flex-direction: row;
+  
+}
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu .mm-shop-by-size .links>div{
+width:50%;
+    
+  }
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu .mm-shop-by-size a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu .mm-callout {
+  text-align: left;
+  padding: 0 5px;
+}
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu .mm-callout a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu .mm-image {
+  padding: 0 5px;
+}
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu .sub-menu-title {
+  border-bottom: 3px solid #00505b;
+}
+@media (max-width: 991px) {
+  #megamenu button {
+    display: block;
+  }
+  #megamenu #sub-menus {
+    flex-direction: column;
+    display: none;
+  }
+  #megamenu #sub-menus .sub-menu-container.intent .sub-menu-title:after {
+    content: "-";
+    position: absolute;
+    right: 1em;
+  }
+  #megamenu #sub-menus .sub-menu-container {
+    margin: 0;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu-title:after {
+    content: "+";
+    position: absolute;
+    right: 1em;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu-title {
+    padding: 10px 0 10px 5px;
+    background-color: #eee;
+    display: flex;
+    margin: 5px 0;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu {
+    padding-top: 0;
+    flex-direction: column;
+    position: relative;
+    left: initial;
+    height: auto;
+    box-shadow: none;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-callout {
+    padding: 0 !important;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-callout a {
+    padding: 10px 0 10px 5px;
+    background-color: #ddd;
+    margin-bottom: 1px;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-titled-list {
+    padding: 0;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-titled-list p:after {
+    content: "+";
+    position: absolute;
+    right: 1em;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-titled-list p {
+    padding: 10px 0 10px 15px;
+    background-color: #aaa;
+    margin-bottom: 1px;
+    cursor: pointer;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-titled-list a {
+    display: none !important;
+    padding: 10px 0 10px 25px;
+    background-color: #ddd;
+    margin-bottom: 1px;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-titled-list.intent p {
+    border-bottom: 3px solid #00505b;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-titled-list.intent p:after {
+    content: "-";
+    position: absolute;
+    right: 1em;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-titled-list.intent a {
+    display: block !important;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-image img {
+    display: none;
+  }
+  #megamenu #sub-menus.open {
+    display: flex;
+  }
+}
+

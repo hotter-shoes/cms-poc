@@ -1,8 +1,11 @@
 
 
-import React, {useState,useEffect} from 'react'
-import Loader from 'react-loader-spinner'
-var amp = require('./cms-javascript-sdk.js');
+import React, {useState,useEffect} from 'react';
+import {Link} from 'react-router-dom';
+
+import LoadingSplash from './LoadingSplash.js'
+
+var amp = require('../lib/cms-javascript-sdk.js');
 
 function Hotspots(){
     const sysiri = 'http://content.cms.amplience.com'
@@ -24,38 +27,32 @@ function Hotspots(){
             setHotspotConfig(contentTree)
             setLoaded(true)
         }else{
-            console.error("Un-expected response from Amplience",slotID,data)
+            console.error("Un-expected response from Amplience","Hotspots",slotID,data)
         }
 
       },error=>console.error(error))
   
     },[])
    
-    function LoadingSplash(){
-        return (<Loader className="loader"
-            type="ThreeDots"
-            color="#ddd"
-            height={500}
-        />)
-    }
+ 
 
 
     function Hotspot(props){
-
-        const imageUrl = `https://${props.image.defaultHost}/i/${props.image.endpoint}/${props.image.name}?w=1350&sm=aspect&aspect=3:1&scaleFit=poi&poi={$this.metadata.pointOfInterest.x},{$this.metadata.pointOfInterest.y},{$this.metadata.pointOfInterest.w},{$this.metadata.pointOfInterest.h}`
+        const imageManipulationOptions = "w=1350&qly=80&sm=aspect&aspect=3:2&scaleFit=poi&poi={$this.metadata.pointOfInterest.x},{$this.metadata.pointOfInterest.y},{$this.metadata.pointOfInterest.w},{$this.metadata.pointOfInterest.h}"
+        const imageUrl = `https://${props.image.defaultHost}/i/${props.image.endpoint}/${props.image.name}?${imageManipulationOptions}`
 
         const backgroundImageStyle = {backgroundImage:`url(${imageUrl})`}
        
         return(       
         
-                <a className="hotspot" href={props.link.url}>
+                <Link className="hotspot" to={props.link.url}>
                     <div className="background-image" style={backgroundImageStyle}></div>
                     <div className="text">
                         <p className="headline">{props.text.headline}</p>
                         <p className="subtext">{props.text.subtext}</p>
                         <p className="cta">{props.link.text}</p>
                     </div>
-                </a>
+                </Link>
        
         )
     }

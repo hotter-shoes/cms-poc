@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Banner from './banner'
-import Hotspots from './hotspots';
+import Banner from '../components/banner'
+import Hotspots from '../components/hotspots';
 
 function HomePage(){
 
