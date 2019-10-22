@@ -146,7 +146,7 @@ width:50%;
     margin-bottom: 1px;
   }
   #megamenu #sub-menus .sub-menu-container .sub-menu .mm-titled-list {
-    padding: 0;
+    padding: 0 !important;
   }
   #megamenu #sub-menus .sub-menu-container .sub-menu .mm-titled-list p:after {
     content: "+";
@@ -174,6 +174,46 @@ width:50%;
     right: 1em;
   }
   #megamenu #sub-menus .sub-menu-container .sub-menu .mm-titled-list.intent a {
+    display: block !important;
+  }
+
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-shop-by-size {
+    padding: 0 !important;
+  }
+
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-shop-by-size .links{
+    display: block !important;
+   }
+
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-shop-by-size .links>div{
+   width:100% !important;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-shop-by-size p:after {
+    content: "+";
+    position: absolute;
+    right: 1em;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-shop-by-size p {
+    padding: 10px 0 10px 15px;
+    background-color: #aaa;
+    margin-bottom: 1px;
+    cursor: pointer;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-shop-by-size a {
+    display: none !important;
+    padding: 10px 0 10px 25px;
+    background-color: #ddd;
+    margin-bottom: 1px;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-shop-by-size.intent p {
+    border-bottom: 3px solid #00505b;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-shop-by-size.intent p:after {
+    content: "-";
+    position: absolute;
+    right: 1em;
+  }
+  #megamenu #sub-menus .sub-menu-container .sub-menu .mm-shop-by-size.intent a {
     display: block !important;
   }
   #megamenu #sub-menus .sub-menu-container .sub-menu .mm-image img {
