@@ -1,33 +1,35 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import get from 'lodash.get'
+
+import {getImageURL,getImageOptionsParams} from '../../lib/amplience.helper';
+
+/*TODO Need to change the default props to provide a 404 image placeholder*/
+import image404 from '../defaults/404image';
 
 function MegaMenuImage(props){
 
-const defaultProps = {
-    link:"#image",
-    image:{
-        '@id': "http://image.cms.amplience.com/ba173baf-4c5d-43d2-a2f8-d10f51287fe1",
-'defaultHost': "i1.adis.ws",
-'endpoint': "salmonsandbox",
-'id': "ba173baf-4c5d-43d2-a2f8-d10f51287fe1",
-'mediaType': "image",
-'name': "1469709889818_Blue_set_a"
-    },
-    alt:"mm alt"
+const link = props.link || "#"
+const alt = props.alt || "";
+const image = props.image || image404;
+
+/*Amplience dynamic image parameters*/
+const imageOptions = {
+    w:380,
+    h:260,
+    qlt:80
 }
 
-const link = get(props,'link',defaultProps.href)
-const imageConf = get(props,'src',defaultProps.image)
-const alt = get(props,'alt',defaultProps.alt)
+/*uses helper functions to generate the amplience image request url*/
+const imageParams = getImageOptionsParams(imageOptions);
+const imageUrl = getImageURL(image)
+const imageSRC = imageUrl + imageParams;
 
-const imageUrl = `https://${imageConf.defaultHost}/i/${imageConf.endpoint}/${imageConf.name}?w=380&h=260&qlt=80`
-
-    return(<section className="mm-image">
-        <Link to={link} onClick={()=>props.closeMenu()}>
-            <img src={imageUrl} alt={alt}/>
-        </Link>
-    </section>
+    return(
+        <section className="mm-image">
+            <Link to={link} onClick={()=>props.closeMenu()}>
+                <img src={imageSRC} alt={alt}/>
+            </Link>
+        </section>
     )
 }
 

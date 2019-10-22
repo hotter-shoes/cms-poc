@@ -2,32 +2,29 @@ import React from 'react';
 
 import {Link} from 'react-router-dom';
 
-import get from 'lodash.get';
-
 function Callout(props){
 
     const defaultProps = {
         "links": [{
-                "text": "Link 1",
-                "url": "#1"
-            },
-            {
-                "text": "Link 2",
-                "url": "#2"
-            }, {
-                "text": "Link 3",
-                "url": "#3"
-            }
-        ]
+            "text": "Missing Links",
+            "url": "#"
+        }]
     }
 
-    const links = get(props,'links',defaultProps.links);
+    const links = props.links || defaultProps.links
 
-    const linkList = links.map((link,index)=><Link key={index} to={link.url} onClick={()=>props.closeMenu()}>{link.text}</Link>);
+    const linkList = links.map((link,index)=>{
+        return(
+            <Link key={index} to={link.url || '#'} onClick={()=>props.closeMenu()}>
+                {link.text || 'Missing Link Text'}
+            </Link>
+        )
+    });
 
-    return(<section className="mm-callout">
-        {linkList}
-    </section>
+    return(
+        <section className="mm-callout">
+            {linkList}
+        </section>
     )
 }
 

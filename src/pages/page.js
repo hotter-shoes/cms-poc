@@ -68,7 +68,10 @@ function Page({match}){
     }
     return(
         <div className="placeholder" style={style.page}>
+            <div className="container">
             <h1 style={style.header}>{match.params.title}</h1>
+            </div>
+          
         </div>
     )
 

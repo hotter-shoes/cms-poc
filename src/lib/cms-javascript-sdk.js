@@ -1,8 +1,6 @@
 
 
 (function (definition) {
-    'use strict';
-
     if (typeof module === 'object' && module && typeof module.exports === 'object') {
         module.exports = definition();
     } else if (typeof window !== 'undefined' || typeof window.self !== 'undefined') {
@@ -19,8 +17,6 @@
     }
 
 })(function () {
-    'use strict';
-
     var _isArray = Array.isArray || function (arg) {
         return Object.prototype.toString.call(arg) === '[object Array]';
     };

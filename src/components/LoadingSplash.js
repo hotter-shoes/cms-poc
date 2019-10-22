@@ -2,11 +2,11 @@ import React from 'react';
 
 import Loader from 'react-loader-spinner'
 
-function LoadingSplash(){
+function LoadingSplash(props){
     return (<Loader className="loader"
         type="ThreeDots"
         color="#ddd"
-        height={500}
+        height={props.height || 50}
     />)
 }
 

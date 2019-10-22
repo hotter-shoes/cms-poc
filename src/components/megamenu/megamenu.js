@@ -1,52 +1,19 @@
-import React,{useState,useEffect} from 'react'
+import React , {useState} from 'react';
 
-import SubMenu from './megamenu/submenu';
-
-import './../css/megamenu.css';
-
-import defaultJson from './defaults/megamenu.json'
-import LoadingSplash from './LoadingSplash';
-var amp = require('../lib/cms-javascript-sdk.js');
+import SubMenu from './submenu';
 
 const interactionTimeout = 300;
 const breakpoint = 992;
 
 function MegaMenu(props){
-
-    const sysiri = 'http://content.cms.amplience.com'
-    const slotID = '4d73f7d6-1958-416e-833d-7990a3ee4d23';
-    const store = 'salmonsandbox';
-    const encodedQuery = encodeURIComponent(JSON.stringify({'sys.iri':`${sysiri}/${slotID}`}));
-    const contentDeliveryUrl = `https://c1.adis.ws/cms/content/query?fullBodyObject=true&query=${encodedQuery}&scope=tree&store=${store}`;
-  
-    const [megaMenuConfig,setMegaMenuConfig] = useState({});
-    const [loaded,setLoaded] = useState(false);
-    const [open,setOpen] = useState(false);
-  
-    useEffect(()=>{
-      fetch(contentDeliveryUrl)
-      .then(res => res.json())
-      .then((data)=>{
-        if(data.result.length>0){
-            const contentTree = amp.inlineContent(data)[0];
-            console.log(contentTree)
-            setMegaMenuConfig(contentTree.sections||{})
-            setLoaded(true)
-        }else{
-            console.error("Un-expected response from Amplience","Mega Menu",slotID,data)
-        }
-
-      },error=>console.error(error))
-  
-    },[])
-
-
+    const [open, setOpen] = useState(false);
+    const [megaMenuConfig,setMegaMenuConfig] = useState(props.sections||[]);
 
     //used for debugging, needs to be tied into a button in the header
-    function toggleMenu(){
+    function toggleMenu() {
         setOpen(!open);
     }
-    
+
     //hover events for desktop
     function handleMouseEnter(event, index) {
         if (window.innerWidth >= breakpoint) {
@@ -66,7 +33,7 @@ function MegaMenu(props){
     }
 
     function handleOnMouseUp(event, index) {
-        console.log("mouse",window.innerWidth);
+        console.log("mouse", window.innerWidth);
         //mobile
         if (window.innerWidth <= breakpoint) {
             //do not navigate when clicking on menu titles
@@ -78,11 +45,11 @@ function MegaMenu(props){
         }
     }
 
-    function handleOnTouchEnd(event, index , href) {
+    function handleOnTouchEnd(event, index, href) {
 
         //to prevent the browser firing extra mouse events on touch, we have to block it bubbling in all cases.
         event.preventDefault();
-        console.log("tap", window.innerWidth,megaMenuConfig[index].titleClicked,href);
+        console.log("tap", window.innerWidth, megaMenuConfig[index].titleClicked, href);
         const oldIntent = megaMenuConfig[index].intent;
         //mobile
         if (window.innerWidth <= breakpoint) {
@@ -94,7 +61,7 @@ function MegaMenu(props){
             if (megaMenuConfig[index].titleClicked) {
                 console.log("navigate and close")
                 //use history so that the page doesnt refresh (react-router)
-                props.history.push(href)
+                props.customHistory.push(href)
                 //reset the intent to close all menus
                 handleTitleClicked();
                 handleIntent();
@@ -106,7 +73,6 @@ function MegaMenu(props){
             }
         }
     }
-
 
     function handleIntent(index, intent) {
         //go through each section and reset timer and intent
@@ -132,6 +98,7 @@ function MegaMenu(props){
         setMegaMenuConfig(newConfig);
     }
 
+
     /**
      * pointer events are changed depending on what mode the menu is in
      * Mobile mode supports tap events
@@ -144,43 +111,33 @@ function MegaMenu(props){
         tap: handleOnTouchEnd
     }
 
-    function closeMenu(){
+    function closeMenu() {
         handleIntent();
         toggleMenu();
     }
    
+    const subMenues = megaMenuConfig.map((submenu,index)=>{
+        return <SubMenu 
+        key={index} 
+        index={index} 
+        title={submenu.title} 
+        link={submenu.link} 
+        subsections={submenu.subsections} 
+        intent={submenu.intent} 
+        pointerEvents = {pointerEvents}
+        closeMenu = {closeMenu}
+        />
+    })
 
-
-    function LoadedMegaMenu(){
-        const subMenues = megaMenuConfig.map((submenu,index)=>{
-            return <SubMenu 
-            key={index} 
-            index={index} 
-            title={submenu.title} 
-            link={submenu.link} 
-            subsections={submenu.subsections} 
-            intent={submenu.intent} 
-            pointerEvents = {pointerEvents}
-            closeMenu = {closeMenu}
-            />
-        })
-
-
-        return(
-            <>
-        <button onClick={()=>toggleMenu()}>{open?"Close":"Open"}</button>
-        <section id="sub-menus" className={open?"open":""}>
-            {subMenues}
-        </section>
-        </>
-        )
-    }
 
     return(
-    <section id="megamenu">
-        {loaded?<LoadedMegaMenu/>:<LoadingSplash/>}
-
-    </section>)
+        <>
+            <button onClick={()=>toggleMenu()}>{open?"Close":"Open"}</button>
+            <section id="sub-menus" className={open?"open":""}>
+                {subMenues}
+            </section>
+        </>
+    )
 }
 
 export default MegaMenu;
