@@ -11,7 +11,7 @@ function Page({match}){
     })
 
     function stringToRGB(string) {
-     
+        //takes string and turns it into 3 numbers, which then are converted % 255 to create a RGB
         let stringTotal = {
             r: 0,
             g: 0,
@@ -61,9 +61,9 @@ function Page({match}){
 
     function colourToCSS(colour, invert) {
         if (invert) {
-            return "rgb(" + (255 - colour.r || 0) + "," + (255 - colour.g || 0) + "," + (255 - colour.b || 0) + ")"
+            return `rgb(${(255 - colour.r || 0)},${(255 - colour.g || 0)},${(255 - colour.b || 0)})`
         } else {
-            return "rgb(" + (colour.r || 0) + "," + (colour.g || 0) + "," + (colour.b || 0) + ")"
+            return `rgb(${(colour.r || 0)},${(colour.g || 0)},${(colour.b || 0)})`
         }
     }
     return(

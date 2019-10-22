@@ -3,12 +3,12 @@ import React, {useState,useEffect} from 'react'
 import {getContentBySlotId} from '../lib/amplience.helper';
 
 import LoadingSplash from './LoadingSplash';
-import DefaultBanner from './banner/defaultBanner';
+import Banner from './banner/banner';
 
 
 var amp = require('../lib/cms-javascript-sdk.js');
 
-function Banner(){
+function BannerSlot(){
    
     const slotID = '49113ce6-d89a-41de-869a-6393ac3b7e24';
   
@@ -24,7 +24,7 @@ function Banner(){
             setBannerConfig(contentTree.banner||{})
             setLoaded(true)
         }else{
-            console.error("Un-expected response from Amplience",slotID,data)
+            console.error("Un-expected response from Amplience","Banner",slotID,data)
         }
       },error=>console.error(error))
   
@@ -36,9 +36,9 @@ function Banner(){
 
     return (
         <>
-        {loaded?<DefaultBanner {...bannerConfig}/> : <LoadingSplash/>}
+        {loaded?<Banner {...bannerConfig}/> : <LoadingSplash/>}
         </>
     )
 }
 
-export default Banner
+export default BannerSlot

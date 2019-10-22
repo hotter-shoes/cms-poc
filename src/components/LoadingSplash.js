@@ -4,8 +4,8 @@ import Loader from 'react-loader-spinner'
 
 function LoadingSplash(props){
     return (<Loader className="loader"
-        type="ThreeDots"
-        color="#ddd"
+        type={props.type || "ThreeDots"}
+        color={props.colour || "#ddd"}
         height={props.height || 50}
     />)
 }
