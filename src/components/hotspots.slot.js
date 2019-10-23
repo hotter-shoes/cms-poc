@@ -9,7 +9,7 @@ var amp = require('../lib/cms-javascript-sdk.js');
 
 function HotspotsSlot(){
   
-    const slotID = 'fc1efc03-131d-47d5-b389-5bab7c90f185';
+    const slotID = 'b2f83a21-c630-4f0f-9cc7-53af4800e8e6';
     const [hotspotConfig,setHotspotConfig] = useState({});
     const [loaded,setLoaded] = useState(false);
   

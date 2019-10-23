@@ -10,7 +10,7 @@ var amp = require('../lib/cms-javascript-sdk.js');
 
 function BannerSlot(){
    
-    const slotID = '49113ce6-d89a-41de-869a-6393ac3b7e24';
+    const slotID = '2cb34398-4170-4694-a3f0-5d85de451537';
   
     const [bannerConfig,setBannerConfig] = useState({});
     const [loaded,setLoaded] = useState(false);
