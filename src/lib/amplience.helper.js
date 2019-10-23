@@ -1,9 +1,30 @@
 export async function getContentBySlotId(slotId,store){
-        const sysiri = 'http://content.cms.amplience.com'
-        const encodedQuery = encodeURIComponent(JSON.stringify({'sys.iri':`${sysiri}/${slotId}`}));
+        //this needs to be a bit smarter so that we're not constantly querying the url parms for every content request
+        const params = getUrlParams();
+        let amplienceURL = 'content.cms.amplience.com';
+        if(params.api){
+            amplienceURL = params.api;
+            console.info("USING VSE!",amplienceURL)
+            if(params.timestamp){
+                amplienceURL += `?timestamp=${params.timestamp}`;
+                console.info("timestamp:" ,new Date(parseInt(params.timestamp)))
+            }
+        }
+
+        const encodedQuery = encodeURIComponent(JSON.stringify({'sys.iri':`${amplienceURL}/${slotId}`}));
         const contentDeliveryUrl = `https://c1.adis.ws/cms/content/query?fullBodyObject=true&query=${encodedQuery}&scope=tree&store=${store||'salmonsandbox'}`;
         return await fetch(contentDeliveryUrl)
 }
+
+function getUrlParams(){
+    let params = {}   
+    window.location.search.replace("?","").split("&").forEach(param=>{
+            const [key,value] = param.split("=");
+            params[key]=value;
+            })
+    return params
+}
+
 
 export function getImageURL(imageObj){
     // example
