@@ -120,9 +120,9 @@ function MegaMenu(props){
         return <SubMenu 
         key={index} 
         index={index} 
-        title={submenu.title} 
-        link={submenu.link} 
-        subsections={submenu.subsections} 
+        title={submenu.title||"Missing Title"} 
+        link={submenu.link||"#"} 
+        subsections={submenu.subsections||[]} 
         intent={submenu.intent} 
         pointerEvents = {pointerEvents}
         closeMenu = {closeMenu}

@@ -7,8 +7,6 @@ import './../css/megamenu.css';
 import LoadingSplash from './LoadingSplash';
 var amp = require('../lib/cms-javascript-sdk.js');
 
-
-
 function MegaMenuSlot(props){
     const slotID = '4d73f7d6-1958-416e-833d-7990a3ee4d23';
     const [loaded,setLoaded] = useState(false);
