@@ -17,9 +17,16 @@ function BannerSlot(){
   
     useEffect(()=>{
       getContentBySlotId(slotID)
-      .then(res => res.json())
+      .then(res => {
+        const contentType = res.headers.get("content-type");
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+          return res.json()
+        }else{
+          return [];
+        }
+      })
       .then((data)=>{
-        if(data.result.length>0){
+        if(data.result && data.result.length>0){
             const contentTree = amp.inlineContent(data)[0];
             setBannerConfig(contentTree.banner||{})
             setLoaded(true)
@@ -27,6 +34,9 @@ function BannerSlot(){
             console.error("Un-expected response from Amplience","Banner",slotID,data)
         }
       },error=>console.error(error))
+      .catch(error=>{
+        console.error(error)
+      })
   
     },[])
 

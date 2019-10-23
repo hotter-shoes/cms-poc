@@ -1,18 +1,20 @@
 export async function getContentBySlotId(slotId,store){
         //this needs to be a bit smarter so that we're not constantly querying the url parms for every content request
         const params = getUrlParams();
-        let amplienceURL = 'content.cms.amplience.com';
+        let amplienceURL = 'c1.adis.ws';
+
         if(params.api){
-            amplienceURL = params.api;
-            console.info("USING VSE!",amplienceURL)
-            if(params.timestamp){
-                amplienceURL += `?timestamp=${params.timestamp}`;
-                console.info("timestamp:" ,new Date(parseInt(params.timestamp)))
-            }
+           let vseDomainQueryURL = `https://virtual-staging.adis.ws/domain/${params.api}`;
+           if(params.timestamp){
+               vseDomainQueryURL += `?timestamp=${params.timestamp}`;
+           }
+            const requestBody = await fetch(vseDomainQueryURL);
+            amplienceURL  = await requestBody.text();
+            console.info("VSE URL:" ,amplienceURL,new Date(parseInt(params.timestamp)))
         }
 
-        const encodedQuery = encodeURIComponent(JSON.stringify({'sys.iri':`${amplienceURL}/${slotId}`}));
-        const contentDeliveryUrl = `https://c1.adis.ws/cms/content/query?fullBodyObject=true&query=${encodedQuery}&scope=tree&store=${store||'salmonsandbox'}`;
+        const encodedQuery = encodeURIComponent(JSON.stringify({'sys.iri':`content.cms.amplience.com/${slotId}`}));
+        const contentDeliveryUrl = `https://${amplienceURL}/cms/content/query?fullBodyObject=true&query=${encodedQuery}&scope=tree&store=${store||'salmonsandbox'}`;
         return await fetch(contentDeliveryUrl)
 }
 
