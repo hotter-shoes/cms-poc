@@ -1,20 +1,28 @@
 export async function getContentBySlotId(slotId,store){
         //this needs to be a bit smarter so that we're not constantly querying the url parms for every content request
+        //needs to be stored in state/session storage so that when the page transition it keeps the preview going
         const params = getUrlParams();
-        let amplienceURL = 'c1.adis.ws';
+        let amplienceURL = 'c1.adis.ws'; //production amplience url
 
         if(params.api){
+        //https://docs.amplience.net/integration/contentpreviewapps.html
            let vseDomainQueryURL = `https://virtual-staging.adis.ws/domain/${params.api}`;
            if(params.timestamp){
                vseDomainQueryURL += `?timestamp=${params.timestamp}`;
            }
+           //vseDomainQueryURL asks amplience for the url that the preview content should be requested from
+           // e.g https://virtual-staging.adis.ws/domain/yv6wd4t3od0v1ggv151bgp9zk.staging.bigcontent.io?timestamp=1572220800000
+           // returns yv6wd4t3od0v1ggv151bgp9zk-gvzrfgnzc-1572220800000.staging.bigcontent.io
             const requestBody = await fetch(vseDomainQueryURL);
+            //need a bit more defense around this bit....
             amplienceURL  = await requestBody.text();
             console.info("VSE URL:" ,amplienceURL,new Date(parseInt(params.timestamp)))
         }
 
+        //https://docs.amplience.net/integration/consumingcontent.html
         const encodedQuery = encodeURIComponent(JSON.stringify({'sys.iri':`content.cms.amplience.com/${slotId}`}));
         const contentDeliveryUrl = `https://${amplienceURL}/cms/content/query?fullBodyObject=true&query=${encodedQuery}&scope=tree&store=${store||'salmonsandbox'}`;
+        console.log(contentDeliveryUrl)
         return await fetch(contentDeliveryUrl)
 }
 

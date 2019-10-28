@@ -3,6 +3,7 @@ import HomePage from './pages/homepage';
 import Page from './pages/page';
 
 import MegaMenuSlot from './components/megamenu.slot.js';
+import USPSlot from './components/usp.slot.js';
 
 import {Router, Route,Link } from "react-router-dom";
 import { createBrowserHistory } from "history";
@@ -16,7 +17,9 @@ return(
     <div id="page">
       <Router history={customHistory}>
         <header>
-          <Link to={"/"}><img src="https://i1.adis.ws/i/salmonsandbox/logo-full?h=60" alt="Hotter Logo"></img> </Link> <MegaMenuSlot customHistory={customHistory}/>
+          <Link to={"/"}><img src="https://i1.adis.ws/i/salmonsandbox/logo-full?h=60" alt="Hotter Logo"></img> </Link> 
+          <MegaMenuSlot customHistory={customHistory}/>
+          <USPSlot/>
         </header>
         
         <Route path="/" exact component={HomePage}></Route>
