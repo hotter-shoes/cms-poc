@@ -31,7 +31,7 @@ function handleClick(e) {
     if (e.target.href) {
       const url = new URL(e.target.href);
       //if it is an internal link, push to history so page doesnt refresh
-      if (url.hostname.indexOf(".hotter.com") > -1 || url.hostname === "localhost") {
+      if (url.hostname.indexOf(".hotter.com") > -1 || url.hostname === "localhost" ||url.hostname.indexOf("hotter-amplience-poc.herokuapp.com")  ) {
         history.push(e.target.pathname);
       } else {
         //otherwise open new tab
