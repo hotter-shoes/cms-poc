@@ -10,6 +10,10 @@ function TableOfContents(props){
     return(<ul id="toc">{tableOfContents}</ul> )
   }
 
-  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)  
+  const scrollToRef = (ref) => window.scrollTo({
+    top: ref.current.offsetTop,
+    left: 0,
+    behavior: 'smooth'
+  })  
 
   export default TableOfContents;
