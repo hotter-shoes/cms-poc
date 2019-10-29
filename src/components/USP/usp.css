@@ -1,68 +1,69 @@
-#usp.countdown{
+#usp.countdown {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-#usp.countdown .message{
+#usp.countdown .message {
     font-size: 1.2em;
     font-weight: bold;
 }
 
 
-#usp.countdown .timer{
-display:flex;
-flex-direction: row;
+#usp.countdown .timer {
+    display: flex;
+    flex-direction: row;
 }
 
-#usp.countdown .timer>div{
-    display:flex;
+#usp.countdown .timer>div {
+    display: flex;
     flex-direction: column;
     margin: 0 2px;
-    }
+}
 
 
-#usp.countdown .timer .digit{
-    font-size:2em;
+#usp.countdown .timer .digit {
+    font-size: 2em;
     font-weight: bold;
 }
 
-#usp.countdown .timer .word{
-    font-size:0.75em;
+#usp.countdown .timer .word {
+    font-size: 0.75em;
 }
 
-#usp.simple{
+#usp.simple {
     text-transform: uppercase;
 }
 
-#usp.simple{
+#usp.simple {
     text-transform: uppercase;
 }
 
-#usp.simple .code{
+#usp.simple .code {
     font-weight: bold;
 }
 
-#usp.simple .use{
-   font-size:0.8em;
+#usp.simple .use {
+    font-size: 0.8em;
 }
 
-#usp.simple .terms{
+#usp.simple .terms {
     text-decoration: underline;
 }
 
-#usp.simple a{
+#usp.simple a {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
 
-#usp.simple .mobile{
-    display:none;
+#usp.simple .mobile {
+    display: none;
 }
 
-@media(max-width:991px){
-    #usp.simple .desktop{
-        display:none;
+@media(max-width:991px) {
+    #usp.simple .desktop {
+        display: none;
     }
 }

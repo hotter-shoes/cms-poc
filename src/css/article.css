@@ -1,10 +1,11 @@
-#article{
+#article {
     max-width: 1350px;
     margin: 0 auto;
-    padding:0 12px;
+    padding: 0 1%;
+    width: 98%;
 }
 
-#article #toc{
+#article #toc {
     display: inline-block;
     width: 40%;
     margin: 0;
@@ -12,21 +13,36 @@
     vertical-align: top;
     margin-top: 1.8em;
     padding-right: 1%;
+    list-style: none;
 }
-#article #toc li{
-    margin:0.5em 0;
+
+#article #toc li {
+    margin: 0.5em 0;
+
 }
 
 
-#article #toc li a{
+#article #toc li a {
     text-decoration: none;
     font-weight: bold;
-    color:inherit;
-   
+    color: inherit;
+
 }
 
 
-#article #contents{
+#article #contents {
     display: inline-block;
-    width:59%;
+    width: 59%;
+}
+
+@media(max-width:991px) {
+
+    #article #toc,
+    #article #contents {
+        width: 100%;
+        margin: 0;
+        display: block;
+        padding: 0;
+    }
+
 }
