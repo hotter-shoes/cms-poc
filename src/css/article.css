@@ -1,0 +1,32 @@
+#article{
+    max-width: 1350px;
+    margin: 0 auto;
+    padding:0 12px;
+}
+
+#article #toc{
+    display: inline-block;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    margin-top: 1.8em;
+    padding-right: 1%;
+}
+#article #toc li{
+    margin:0.5em 0;
+}
+
+
+#article #toc li a{
+    text-decoration: none;
+    font-weight: bold;
+    color:inherit;
+   
+}
+
+
+#article #contents{
+    display: inline-block;
+    width:59%;
+}

@@ -6,6 +6,8 @@ import Article from './article/article';
 
 import LoadingSplash from './LoadingSplash';
 
+import '../css/article.css'
+
 var amp = require('../lib/cms-javascript-sdk.js');
 
 

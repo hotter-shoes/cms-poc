@@ -11,9 +11,10 @@ function Article(props){
 
     return(
     <div id="article">
-      <h1>{props.title}</h1>
+      
       <TableOfContents {...props}/>
-      <div  onClick={(event)=>handleClick(event)}>
+      <div  id="contents" onClick={(event)=>handleClick(event)}>
+      <h1>{props.title}</h1>
       <ArticleSections {...props}/>
       </div>
     </div>
