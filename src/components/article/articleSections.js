@@ -23,9 +23,6 @@
       }
     },[])
 
-
-
-    console.log('article sections');
     const sections = props.sections.map((section,index)=>{
       const markdown = md.render(section.markdown);
       return(

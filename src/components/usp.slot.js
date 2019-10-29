@@ -26,7 +26,6 @@ function USPSlot(){
       .then((data)=>{
         if(data.result && data.result.length>0){
             const contentTree = amp.inlineContent(data)[0];
-            console.log(contentTree)
             setUSPConfig(contentTree.usp||{})
             setLoaded(true)
         }else{

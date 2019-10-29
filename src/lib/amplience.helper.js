@@ -22,7 +22,6 @@ export async function getContentBySlotId(slotId,store){
         //https://docs.amplience.net/integration/consumingcontent.html
         const encodedQuery = encodeURIComponent(JSON.stringify({'sys.iri':`content.cms.amplience.com/${slotId}`}));
         const contentDeliveryUrl = `https://${amplienceURL}/cms/content/query?fullBodyObject=true&query=${encodedQuery}&scope=tree&store=${store||'salmonsandbox'}`;
-        console.log(contentDeliveryUrl)
         return await fetch(contentDeliveryUrl)
 }
 

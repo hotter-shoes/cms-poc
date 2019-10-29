@@ -31,7 +31,6 @@ function ArticleSlot(){
       .then((data)=>{
         if(data.result && data.result.length>0){
             const contentTree = amp.inlineContent(data)[0];
-            console.log(contentTree)
             setArticleConfig(contentTree.article||{})
             setLoaded(true)
         }else{
@@ -44,10 +43,9 @@ function ArticleSlot(){
   
     },[])
 
-console.log('rerender');
     return (
-           <>
-      {loaded ? <Article {...articleConfig}/>:<LoadingSplash/>}
+      <>
+        {loaded ? <Article {...articleConfig}/>:<LoadingSplash/>}
       </>
     )
 }

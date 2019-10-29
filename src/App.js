@@ -6,7 +6,7 @@ import ArticleSlot from './components/article.slot.js';
 import MegaMenuSlot from './components/megamenu.slot.js';
 import USPSlot from './components/usp.slot.js';
 
-import {BrowserRouter  as Router, Route,Link } from "react-router-dom";
+import { Router, Route,Link } from "react-router-dom";
 
 import history from './lib/history';
 
