@@ -39,7 +39,7 @@ function MegaMenuSlot(props){
     },[])
     return(
         <section id="megamenu">
-            {loaded?<MegaMenu sections={megaMenuConfig.sections||{}} customHistory={props.customHistory}/>:<LoadingSplash/>}
+            {loaded?<MegaMenu sections={megaMenuConfig.sections||{}}/>:<LoadingSplash/>}
         </section>
     )
 }

@@ -1,5 +1,7 @@
 import React , {useState} from 'react';
 
+import history from '../../lib/history';
+
 import SubMenu from './submenu';
 
 const interactionTimeout = 300;
@@ -61,7 +63,7 @@ function MegaMenu(props){
             if (megaMenuConfig[index].titleClicked) {
                 console.log("navigate and close")
                 //use history so that the page doesnt refresh (react-router)
-                props.customHistory.push(href)
+                history.push(href)
                 //reset the intent to close all menus
                 handleTitleClicked();
                 handleIntent();
