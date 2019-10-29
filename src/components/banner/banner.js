@@ -3,6 +3,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import BannerLinks from './bannerLinks';
 
+import './banner.css';
+
 import {getImageURL,getImageOptionsParams} from '../../lib/amplience.helper';
 
 function DefaultBanner(props){

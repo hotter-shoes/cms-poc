@@ -1,0 +1,43 @@
+.banner{
+    position: relative;
+    width:100%;
+  }
+  
+  .banner a.background{
+    width: 100%;
+    margin: 0 auto;
+    height: 700px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .banner .banner-links-container{
+    position: absolute;
+  bottom:24px;
+  width:100%;
+  }
+  
+  .banner .banner-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  
+  .banner .banner-links a{
+    text-decoration: none;
+    background-color:white;
+    color:#00505b;
+    padding:10px;
+    margin-top:5px;
+    border: 2px solid #00505b;
+    border-radius:2px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+  }

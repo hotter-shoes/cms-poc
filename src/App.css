@@ -31,7 +31,7 @@
   justify-content: flex-start;
 }
 
-.placeholder{
+.placeholder {
   width: 100%;
   text-align: center;
   display: flex;
@@ -39,9 +39,9 @@
   justify-content: center;
 }
 
-.placeholder .container{
+.placeholder .container {
   display: flex;
-    align-items: center;
+  align-items: center;
 }
 
 #page header {
@@ -57,96 +57,12 @@
   border-top: solid 3px #00505b;
 }
 
-.loader{
-  width:100%;
-  text-align: center;
-}
-
-#homepage{  max-width: 1350px;
-  margin:0 auto;}
-
-.banner{
-  position: relative;
-  width:100%;
-}
-
-.banner a.background{
+.loader {
   width: 100%;
-  margin: 0 auto;
-  height: 700px;
-  display: block;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.banner .banner-links-container{
-  position: absolute;
-bottom:24px;
-width:100%;
-}
-
-.banner .banner-links{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  max-width: 70%;
-  margin: 0 auto;
-}
-
-.banner .banner-links a{
-  text-decoration: none;
-  background-color:white;
-  color:#00505b;
-  padding:10px;
-  margin-top:5px;
-  border: 2px solid #00505b;
-  border-radius:2px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   text-align: center;
 }
 
-#hotspots{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top:10px;
-}
-
-
-#hotspots .hotspot{
-  width: 49%;
-  text-align: center;
-  text-decoration: none;
-  color:inherit;
-}
-
-#hotspots .hotspot .background-image{
-  height:400px;
-  background-size: cover;
-    background-position: center;
-}
-
-#hotspots .hotspot .text>p{
-  text-decoration: none;
-  margin:0;
-  padding-bottom:5px;
-}
-
-#hotspots .hotspot .text p.headline{
-  font-size:1.5em;
-  font-weight: bold;
-  letter-spacing: 2px;
-  padding-bottom:5px;
-text-transform: uppercase;
-}
-
-#hotspots .hotspot .text p.cta{
-  font-size:1.2em;
-  text-decoration: underline;
-  font-weight: bold;
-  text-transform: uppercase;
+#homepage {
+  max-width: 1350px;
+  margin: 0 auto;
 }

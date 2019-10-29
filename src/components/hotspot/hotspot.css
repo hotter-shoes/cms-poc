@@ -1,0 +1,47 @@
+#hotspots{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top:10px;
+  }
+  
+  
+  #hotspots .hotspot{
+    width: 49%;
+    text-align: center;
+    text-decoration: none;
+    color:inherit;
+  }
+  
+  #hotspots .hotspot .background-image{
+    height:400px;
+    background-size: cover;
+    background-position: center top;
+  }
+  
+  #hotspots .hotspot .text>p{
+    text-decoration: none;
+    margin:0;
+    padding-bottom:5px;
+  }
+  
+  #hotspots .hotspot .text p.headline{
+    font-size:1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom:5px;
+  text-transform: uppercase;
+  }
+  
+  #hotspots .hotspot .text p.cta{
+    font-size:1.2em;
+    text-decoration: underline;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  @media(max-width:991px){
+    #hotspots .hotspot{
+      width: 100%;
+    }
+  }
