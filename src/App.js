@@ -6,7 +6,7 @@ import ArticleSlot from './components/article.slot.js';
 import MegaMenuSlot from './components/megamenu.slot.js';
 import USPSlot from './components/usp.slot.js';
 
-import { Router, Route,Link } from "react-router-dom";
+import { Router, Route,Link ,Switch} from "react-router-dom";
 
 import history from './lib/history';
 
@@ -23,11 +23,13 @@ return(
           <USPSlot/>
         </header>
         
-        <Route path="/" exact component={HomePage}></Route>
-        <Route path="/gb/en/info/:title" exact component={ArticleSlot}></Route>
-        <Route path="/gb/en/:title" exact component={Page}></Route>
-        <Route path="/:title" exact component={Page}></Route>
-
+        <Switch>
+          <Route path="/" exact component={HomePage}></Route>
+          <Route path="/gb/en/info/returning-goods" exact component={()=><ArticleSlot slotId='669d6fbb-76e6-41a7-a759-c75922621b05'/>}></Route>
+          <Route path="/gb/en/info/:title" exact component={Page}></Route>
+          <Route path="/gb/en/:title" exact component={Page}></Route>
+          <Route path="/:title" exact component={Page}></Route>
+        </Switch>
         <footer>
           FOOTER
         </footer>

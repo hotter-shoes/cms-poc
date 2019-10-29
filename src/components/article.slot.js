@@ -11,9 +11,9 @@ import '../css/article.css'
 var amp = require('../lib/cms-javascript-sdk.js');
 
 
-function ArticleSlot(){
+function ArticleSlot(props){
 
-    const slotID = '669d6fbb-76e6-41a7-a759-c75922621b05';
+    const slotID = props.slotID || '669d6fbb-76e6-41a7-a759-c75922621b05';
   
     const [articleConfig,setArticleConfig] = useState({});
     const [loaded,setLoaded] = useState(false);
