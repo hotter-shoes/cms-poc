@@ -1,15 +1,24 @@
 import React , {useState,useEffect} from 'react'
 import Countdown from './countDown';
+import PropTypes from 'prop-types'; // ES6
+CountdownUSP.propTypes = {
+    endDate:PropTypes.string.isRequired,
+    endTime:PropTypes.string.isRequired,
+    message:PropTypes.string.isRequired,
+    style:PropTypes.object
+}
+
+CountdownUSP.defaultProps = {
+    endDate:`${new Date().getUTCDate()+1}/${new Date().getUTCMonth()+1}/${new Date().getFullYear()}`,
+    endTime:'00:00',
+    message:'Countdown USP - No data recieved',
+    style:{}
+}
 
 
 
 function CountdownUSP(props) {
-    const endDate = props.endDate || '01/01/1970';
-    const endTime = props.endTime || '00:00';
-    const message = props.message || 'No Message Provided';
-    const style = props.style || {};
-
-    const promoEndDate = convertUserInputToDate(endDate, endTime);
+    const promoEndDate = convertUserInputToDate(props.endDate, props.endTime);
 
     const milliseconds = getMillisecondsLeft(promoEndDate)
 
@@ -41,9 +50,9 @@ function CountdownUSP(props) {
         return false
     }else{
         return(
-        <div id="usp" className="countdown" style={style}>
+        <div id="usp" className="countdown" style={props.style}>
             <section className="message">
-                <span className="message">{message}</span>
+                <span className="message">{props.message}</span>
             </section>
             <Countdown {...timeRemaining}/>
         </div>

@@ -1,6 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 
+import PropTypes from 'prop-types'; // ES6
+SimpleUSP.propTypes = {
+    promo:PropTypes.string.isRequired,
+    message:PropTypes.string.isRequired,
+    links:PropTypes.object.isRequired,
+    style:PropTypes.object.isRequired
+}
+
+
 function SimpleUSP(props){
 console.log(props)
 const message = props.message || {'desktop':"Missing Message - Desktop",'mobile':"Mising Message - Mobile"};
