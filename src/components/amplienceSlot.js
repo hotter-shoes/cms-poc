@@ -8,7 +8,7 @@ function AmplienceSlot(props){
     const slotId = props.slotId || false;
     const slotType = props.slotType || 'Not Provided';
     const ContentToRender = props.contentToRender || false;
-    const LoadingSplash = props.LoadingSplash || false;
+    const LoadingSplash = props.loadingSplash || false;
 
     const [slotConfig,setSlotConfig] = useState({});
     const [loaded,setLoaded] = useState(false);
