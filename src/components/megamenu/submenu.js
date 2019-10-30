@@ -50,7 +50,11 @@ function SubMenu(props) {
             className="sub-menu"  
             onMouseEnter={(e)=> props.pointerEvents.enter(e,props.index)}  
             onMouseLeave={(e)=>props.pointerEvents.leave(e,props.index)}> 
-                {menu} 
+            
+                <div className="restricted-container">
+                    {menu}
+                </div>
+                
             </div> 
         </section>
     )

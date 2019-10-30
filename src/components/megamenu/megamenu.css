@@ -35,13 +35,25 @@
   font-weight: bold;
   letter-spacing: 1px;
   color: #191919;
+  height: 2em; /*for box sizing*/
+  box-sizing:border-box;
+  line-height: 2em;
 }
 #megamenu #sub-menus .sub-menu-container.intent .sub-menu-title {
   border-bottom: 3px solid #00505b;
+
 }
-#megamenu #sub-menus .sub-menu-container.intent .sub-menu {
-  display: flex;
+
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu{
+  display:flex;
   font-size: 0.95em;
+}
+
+#megamenu #sub-menus .sub-menu-container.intent .sub-menu .restricted-container {
+  max-width: 1350px;
+  width: 100%;
+  display:flex;
+  justify-content: space-evenly;
 }
 #megamenu #sub-menus .sub-menu-container.intent .sub-menu .mm-titled-list {
   text-align: left;
