@@ -13,9 +13,9 @@ function USP(props){
 
     switch(props.usp['@type']){
         case 'https://header.usp.countdown':
-            return <CountdownUSP {...props}/>
+            return <CountdownUSP {...props.usp}/>
         case 'https://header.usp.simple':
-            return <SimpleUSP {...props}/>
+            return <SimpleUSP {...props.usp}/>
         default:
             return false;
     }
