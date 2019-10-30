@@ -5,7 +5,7 @@ import Hotspots from '../components/hotspot/hotspots';
 
 import AmplienceSlot from '../components/amplienceSlot';
 
-import LoadingSplash from '../components/loadingSplash'
+import LoadingSplash from '../components/loadingSplash';
 
 function HomePage(){
     return (
