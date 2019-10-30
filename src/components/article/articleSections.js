@@ -21,6 +21,7 @@
         console.log("scrolling to:" + match.subheader);
         scrollToRef(match.ref)
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     const sections = props.sections.map((section,index)=>{

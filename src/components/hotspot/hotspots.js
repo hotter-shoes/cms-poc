@@ -5,7 +5,10 @@ import Hotspot from './hotspot';
 import './hotspot.css'
 
 function Hotspots(props){
-    const hotspots = props.hotspots.map((hotspot,index)=><Hotspot key={index} {...hotspot}/>)
+
+    const hotspotsConf = props.hotspots || [];
+    
+    const hotspots = hotspotsConf.map((hotspot,index)=><Hotspot key={index} {...hotspot}/>)
     return(
         <div id="hotspots">
             {hotspots}

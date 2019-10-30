@@ -3,13 +3,20 @@ import React , {useState} from 'react';
 import history from '../../lib/history';
 
 import SubMenu from './submenu';
+import './megamenu.css';
 
 const interactionTimeout = 300;
 const breakpoint = 992;
 
 function MegaMenu(props){
+
     const [open, setOpen] = useState(false);
-    const [megaMenuConfig,setMegaMenuConfig] = useState(props.sections||[]);
+    const [megaMenuConfig,setMegaMenuConfig] = useState(props.sections);
+
+    if(typeof props.sections === "undefined"){
+        console.error("Incorrect data sent to megamenu",props);
+        return false;
+    }
 
     //used for debugging, needs to be tied into a button in the header
     function toggleMenu() {
@@ -133,12 +140,12 @@ function MegaMenu(props){
 
 
     return(
-        <>
+        <div id="megamenu">
             <button onClick={()=>toggleMenu()}>{open?"Close":"Open"}</button>
             <section id="sub-menus" className={open?"open":""}>
                 {subMenues}
             </section>
-        </>
+        </div>
     )
 }
 

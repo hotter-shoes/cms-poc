@@ -4,17 +4,24 @@ import React from 'react';
 import TableOfContents from './tableOfContents';
 import ArticleSections from './articleSections';
 import history from '../../lib/history';
+
+import './article.css'
     
 function Article(props){
 
+  if(typeof props.article === "undefined"){
+    console.error("Incorrect data sent to Article",props);
+    return false;
+}
+
     //assign each section its own reference, this enables Table of Content scrolling and Scroll on Load
-    props.sections.forEach(section=>{section.ref = React.createRef()})
+    props.article.sections.forEach(section=>{section.ref = React.createRef()})
     return(
     <div id="article">
-      <TableOfContents {...props}/>
+      <TableOfContents {...props.article}/>
       <div  id="contents" onClick={(event)=>handleClick(event)}>
-        <h1>{props.title}</h1>
-        <ArticleSections {...props}/>
+        <h1>{props.article.title}</h1>
+        <ArticleSections {...props.article}/>
       </div>
     </div>
     )

@@ -7,8 +7,14 @@ import './banner.css';
 
 import {getImageURL,getImageOptionsParams} from '../../lib/amplience.helper';
 
-function DefaultBanner(props){
-    const imageConf = props.bannerImage
+function Banner(props){
+
+    if(typeof props.banner === "undefined"){
+        console.error("Incorrect data sent to Banner",props);
+        return false;
+    }
+
+    const imageConf = props.banner.bannerImage
     /*Amplience dynamic image parameters*/
     const imageOptions = {
         w:1350,
@@ -21,11 +27,11 @@ function DefaultBanner(props){
    
     return(       
         <div className="banner">
-            <Link className="background" to={props.bannerLink} style={backgroundImageStyle}/>
-            {props.links && <BannerLinks links={props.links}/>}
+            <Link className="background" to={props.banner.bannerLink} style={backgroundImageStyle}/>
+            {props.banner.links && <BannerLinks links={props.banner.links}/>}
 
         </div>
     )
 }
 
-export default DefaultBanner
+export default Banner

@@ -5,7 +5,13 @@ import CountdownUSP from './countdownUSP';
 import './usp.css';
 
 function USP(props){
-    switch(props['@type']){
+    
+    if(typeof props.usp === "undefined"){
+        console.error("Incorrect data sent to USP",props);
+        return false;
+    }
+
+    switch(props.usp['@type']){
         case 'https://header.usp.countdown':
             return <CountdownUSP {...props}/>
         case 'https://header.usp.simple':

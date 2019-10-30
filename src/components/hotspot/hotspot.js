@@ -5,10 +5,13 @@ import {Link} from 'react-router-dom';
 import {getImageURL,getImageOptionsParams} from '../../lib/amplience.helper';
 
 
+
+
 /*TODO Need to change the default props to provide a 404 image placeholder*/
 import image404 from '../defaults/404image';
 
 function Hotspot(props){
+
     /*Amplience dynamic image parameters*/
     const imageOptions = {
         w:1350,
