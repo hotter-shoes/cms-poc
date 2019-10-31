@@ -8,7 +8,7 @@ function AmplienceSlot(props){
     const slotId = props.slotId || false;
     const slotType = props.slotType || 'Not Provided';
     const ContentToRender = props.contentToRender || false;
-    const LoadingSplash = props.loadingSplash || false;
+    const LoadingInidicator = props.loadingInidicator || false;
 
     const [slotConfig,setSlotConfig] = useState({});
     const [loaded,setLoaded] = useState(false);
@@ -25,8 +25,9 @@ function AmplienceSlot(props){
             })
             .then((data) => {
                 if (data.result && data.result.length > 0) {
-
+                    console.log("JSON-LD",data)
                     const contentTree = amp.inlineContent(data)[0];
+                    console.log("JSON",contentTree)
                     if (contentTree['@type'] !== slotType) {
                         console.error("Amplience Content type mismatch", contentTree['@type'], slotType)
                     } else {
@@ -46,7 +47,7 @@ function AmplienceSlot(props){
 
     return (
         <>
-        {loaded?(ContentToRender && <ContentToRender {...slotConfig}/>) : (LoadingSplash && <LoadingSplash/>)} 
+        {loaded?(ContentToRender && <ContentToRender {...slotConfig}/>) : (LoadingInidicator && <LoadingInidicator/>)} 
         </>
     )
 
