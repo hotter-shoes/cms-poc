@@ -16,8 +16,7 @@ export async function getContentBySlotId(slotId,store){
             const requestBody = await fetch(vseDomainQueryURL);
             //need a bit more defense around this bit....
             amplienceURL  = await requestBody.text();
-            console.info("VSE URL:" ,amplienceURL,new Date(parseInt(params.timestamp)))
-        }
+                }
 
         //https://docs.amplience.net/integration/consumingcontent.html
         const encodedQuery = encodeURIComponent(JSON.stringify({'sys.iri':`content.cms.amplience.com/${slotId}`}));

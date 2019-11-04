@@ -41,10 +41,8 @@ function AmplienceSlot(props){
             })
             .then((data) => {
                 if (data.result && data.result.length > 0) {
-                    console.log("JSON-LD",data)
                     //convert JSON-LD  to JSON using Amplience SDK helper
                     const contentTree = amp.inlineContent(data)[0];
-                    console.log("JSON",contentTree)
                     //check that the recieved slot data matches what is expected
                     if (contentTree['@type'] !== props.slotType) {
                         //if it doesnt match, don't render
@@ -61,7 +59,7 @@ function AmplienceSlot(props){
                 console.error(error)
             })
 
-    }, [])
+    }, [props.slotId,props.slotType])
 
     return (
         <>
