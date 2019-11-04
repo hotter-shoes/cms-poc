@@ -62,7 +62,7 @@
   text-align: center;
 }
 
-#homepage {
-  max-width: 1350px;
-  margin: 0 auto;
+
+#homepage{
+  width:100%;
 }
