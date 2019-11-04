@@ -3,6 +3,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top:10px;
+    max-width: 991px;
+    margin: 0 auto;
   }
   
   
@@ -45,3 +47,5 @@
       width: 100%;
     }
   }
+
+
